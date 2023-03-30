@@ -7,13 +7,13 @@ using UnityEngine;
 public class SpawnPoints : MonoBehaviour
 {
     [SerializeField]
-    private int _numToSpawnX = 25;
+    private int _numToSpawnX;
     [SerializeField]
-    private int _numToSpawnY = 25;
+    private int _numToSpawnY;
     [SerializeField]
-    private float spawnOffsetX = 0.76f;
+    private float spawnOffsetX;
     [SerializeField]
-    private float spawnOffsetY= 0.75f;
+    private float spawnOffsetY;
     [SerializeField]
     private GameObject prefab;
 
