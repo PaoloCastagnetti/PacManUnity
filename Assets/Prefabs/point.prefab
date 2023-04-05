@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3499124533664800338}
   - component: {fileID: 1347513154564494367}
   - component: {fileID: 4824731628942879229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: point
   m_TagString: Point
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00012391806, y: 0.000009275973}

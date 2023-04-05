@@ -24,4 +24,9 @@ public class MC_movement : MonoBehaviour
     {
         _currentDirection = direction;
     }
+
+    public void changePosition(Vector3 vector3)
+    {
+        transform.position = vector3;
+    }
 }

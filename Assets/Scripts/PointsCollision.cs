@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PointsCollision : CollisionHandler
+public class PointsCollision : TriggerHandler
 {
-    protected override void internalOnCollisionEnter2D()
+    [SerializeField]
+    private GameObject collector;
+    protected override void internalOnTriggerEnter2D()
     {
-        base.internalOnCollisionEnter2D();
+        base.internalOnTriggerEnter2D();
         Debug.LogFormat("Point eated!");
-        Destroy(gameObject);
+
+        PointCollector pointCollector = collector.GetComponent<PointCollector>();
+        pointCollector.addDisabledPoint(gameObject);
+
+        Debug.LogFormat("Game object {0} set false", gameObject.name);
+        gameObject.SetActive(false);
     }
 }
