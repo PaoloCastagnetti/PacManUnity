@@ -15,24 +15,21 @@ public class ResetLevel : MonoBehaviour
 
     public void resetLevel()
     {   
-        if (collector != null && MC_Controller != null)
+        //Set position
+        MC_Controller.changePosition(startingPosition);
+        //Set speed to 0
+        MC_Controller.changeDirection(Vector3.zero);
+        //Getting all disabled points
+        List<GameObject> disabledPoints = collector.getDisabledPoints();
+        //Re-enable all the points
+        Debug.LogFormat("Disabled points: {0}", disabledPoints[0]);
+        foreach (GameObject point in disabledPoints)
         {
-            //Set speed to 0
-            MC_Controller.changeDirection(Vector3.zero);
-            //Set position to X=0, Y=0, Z=0
-            MC_Controller.changePosition(startingPosition);
-            //Getting all disabled points
-            List<GameObject> disabledPoints = collector.getDisabledPoints();
-            //Re-enable all the points
-            Debug.LogFormat("Disabled points: {0}", disabledPoints[0]);
-            foreach (GameObject point in disabledPoints)
+            if (point != null)
             {
-                if (point != null)
-                {
-                    point.gameObject.SetActive(true);
-                }
+                point.gameObject.SetActive(true);
             }
-            collector.removeAllDisabledPoint();
         }
+        collector.removeAllDisabledPoint();
     }
 }

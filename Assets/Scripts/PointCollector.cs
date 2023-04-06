@@ -14,6 +14,10 @@ public class PointCollector : MonoBehaviour
     public void addDisabledPoint(GameObject point)
     {
         disabledPoints.Add(point);
+        if (disabledPoints.Count >= _numOfPoints)
+        {
+            reset.resetLevel();
+        }
     }
     public void removeAllDisabledPoint()
     {
@@ -22,13 +26,5 @@ public class PointCollector : MonoBehaviour
     public List<GameObject> getDisabledPoints() 
     { 
         return disabledPoints;
-    }
-
-    private void Update()
-    {
-        if(disabledPoints.Count >= _numOfPoints)
-        {
-            reset.resetLevel();
-        }
     }
 }
