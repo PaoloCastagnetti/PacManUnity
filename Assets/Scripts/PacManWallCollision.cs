@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallsCollision : CollisionHandler
+public class PacManWallCollision : CollisionHandler
 {
     public MC_movement MC_Controller;
     protected override void internalOnCollisionEnter2D()
