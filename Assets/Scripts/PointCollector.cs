@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PointCollector : MonoBehaviour
 {
-    [SerializeField]
     private List<GameObject> disabledPoints = new List<GameObject>();
 
     [SerializeField]
@@ -16,7 +15,7 @@ public class PointCollector : MonoBehaviour
     {
         disabledPoints.Add(point);
     }
-    public void removeDisabledPoint()
+    public void removeAllDisabledPoint()
     {
         disabledPoints.Clear();
     }

@@ -10,6 +10,9 @@ public class ResetLevel : MonoBehaviour
     [SerializeField]
     private MC_movement MC_Controller;
 
+    [SerializeField]
+    private Vector3 startingPosition;
+
     public void resetLevel()
     {   
         if (collector != null && MC_Controller != null)
@@ -17,7 +20,7 @@ public class ResetLevel : MonoBehaviour
             //Set speed to 0
             MC_Controller.changeDirection(Vector3.zero);
             //Set position to X=0, Y=0, Z=0
-            MC_Controller.changePosition(new Vector3(0, 0, 0));
+            MC_Controller.changePosition(startingPosition);
             //Getting all disabled points
             List<GameObject> disabledPoints = collector.getDisabledPoints();
             //Re-enable all the points
@@ -29,7 +32,7 @@ public class ResetLevel : MonoBehaviour
                     point.gameObject.SetActive(true);
                 }
             }
-            collector.removeDisabledPoint();
+            collector.removeAllDisabledPoint();
         }
     }
 }
