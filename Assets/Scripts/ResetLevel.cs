@@ -8,7 +8,7 @@ public class ResetLevel : MonoBehaviour
     [SerializeField]
     private PointCollector collector;
     [SerializeField]
-    private MC_movement MC_Controller;
+    private MC_Movement MC_Controller;
 
     [SerializeField]
     private Vector3 startingPosition;

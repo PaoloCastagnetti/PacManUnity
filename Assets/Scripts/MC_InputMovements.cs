@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MC_InputMovements : MonoBehaviour
 {
-    public MC_movement MC_Controller;
+    public MC_Movement MC_Controller;
 
     // Update is called once per frame
     void Update()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MC_movement : MonoBehaviour
+public class MC_Movement : MonoBehaviour
 {
     [SerializeField]
     private float _unitPerFrame;
@@ -18,6 +18,11 @@ public class MC_movement : MonoBehaviour
     void Update()
     {
         transform.position = _currentDirection * _unitPerFrame + transform.position;
+    }
+
+    public Vector3 getCurrentdirection()
+    {
+        return _currentDirection;
     }
 
     public void changeDirection(Vector3 direction)

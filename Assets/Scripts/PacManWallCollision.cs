@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PacManWallCollision : CollisionHandler
 {
-    public MC_movement MC_Controller;
+    public MC_Movement MC_Controller;
     protected override void internalOnCollisionEnter2D()
     {
         base.internalOnCollisionEnter2D();
