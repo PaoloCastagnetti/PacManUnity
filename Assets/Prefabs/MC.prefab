@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 9041747678068798387}
   - component: {fileID: 6125367918183129955}
   - component: {fileID: 3229482415828014435}
-  - component: {fileID: 8350326494254512985}
-  - component: {fileID: 7390331984206076147}
-  - component: {fileID: -6650260351826807858}
-  - component: {fileID: -6139903642056222805}
+  - component: {fileID: 5747978057986523445}
+  - component: {fileID: 2851953091271574226}
+  - component: {fileID: -5431064682169175403}
   m_Layer: 6
   m_Name: MC
   m_TagString: Untagged
@@ -137,7 +136,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7033963, y: 2.7581975}
   m_EdgeRadius: 0
---- !u!114 &8350326494254512985
+--- !u!114 &5747978057986523445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7333382197518816057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c557b61721138246a4bfeb3f64f33d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MC_Controller: {fileID: 0}
+--- !u!114 &2851953091271574226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,33 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unitPerFrame: 0.008
---- !u!114 &7390331984206076147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7333382197518816057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c557b61721138246a4bfeb3f64f33d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MC_Controller: {fileID: 8350326494254512985}
---- !u!114 &-6650260351826807858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7333382197518816057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2160e37b6dcfba146ad1837120af117f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MC_Controller: {fileID: 0}
---- !u!114 &-6139903642056222805
+--- !u!114 &-5431064682169175403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
