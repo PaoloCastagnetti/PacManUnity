@@ -9,14 +9,25 @@ public class ResetLevel : MonoBehaviour
     private PointCollector collector;
     [SerializeField]
     private MC_Movement MC_Controller;
+    [SerializeField]
+    private Ghost_Movement Ghost_ControllerBlu;
+    [SerializeField]
+    private Ghost_Movement Ghost_ControllerGreen;
 
     [SerializeField]
     private Vector3 startingPosition;
+    [SerializeField]
+    private Vector3 startingBluPosition;
+    [SerializeField]
+    private Vector3 startingGreenPosition;
 
     public void resetLevel()
     {   
         //Set position
         MC_Controller.changePosition(startingPosition);
+        Ghost_ControllerBlu.changePosition(startingBluPosition);
+        Ghost_ControllerGreen.changePosition(startingGreenPosition);
+
         //Set speed to 0
         MC_Controller.changeDirection(Vector3.zero);
         //Getting all disabled points
