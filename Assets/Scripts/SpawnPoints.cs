@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using UnityEditor;
 using UnityEngine;
 
-public class SpawnPoints : MonoBehaviour
-{
+public class SpawnPoints : MonoBehaviour {
     [SerializeField]
     private int _numToSpawnX;
     [SerializeField]
@@ -22,15 +17,12 @@ public class SpawnPoints : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         currentSpawnOffsetY = 0;
         currentSpawnOffsetX = spawnOffsetX;
-        for (int j = 0; j < _numToSpawnY; j++)
-        {
+        for (int j = 0; j < _numToSpawnY; j++) {
             currentSpawnOffsetX = 0;
-            for(int i = 0; i < _numToSpawnX; i++)
-            {
+            for (int i = 0; i < _numToSpawnX; i++) {
                 //Clone
                 GameObject clonePoint = Instantiate(prefab,
                     new Vector3(transform.position.x + currentSpawnOffsetX, transform.position.y + currentSpawnOffsetY, 0),
@@ -43,8 +35,7 @@ public class SpawnPoints : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+
     }
 }

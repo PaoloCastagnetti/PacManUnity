@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointCollector : MonoBehaviour
-{
+public class PointCollector : MonoBehaviour {
     private List<GameObject> disabledPoints = new List<GameObject>();
 
     [SerializeField]
@@ -11,20 +9,16 @@ public class PointCollector : MonoBehaviour
 
     [SerializeField]
     private ResetLevel reset;
-    public void addDisabledPoint(GameObject point)
-    {
+    public void addDisabledPoint(GameObject point) {
         disabledPoints.Add(point);
-        if (disabledPoints.Count >= _numOfPoints)
-        {
+        if (disabledPoints.Count >= _numOfPoints) {
             reset.resetLevel();
         }
     }
-    public void removeAllDisabledPoint()
-    {
+    public void removeAllDisabledPoint() {
         disabledPoints.Clear();
     }
-    public List<GameObject> getDisabledPoints() 
-    { 
+    public List<GameObject> getDisabledPoints() {
         return disabledPoints;
     }
 }

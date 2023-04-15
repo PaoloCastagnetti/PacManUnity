@@ -1,39 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class MC_Rotation : MonoBehaviour
-{
+public class MC_Rotation : MonoBehaviour {
     public MC_Movement MC_Controller;
     private Vector3 _currentDirection;
 
 
-    private void Start()
-    {
-        
+    private void Start() {
+
     }
-    private void Update()
-    {
+    private void Update() {
         _currentDirection = MC_Controller.getCurrentdirection();
-        if (_currentDirection == Vector3.up)
-        {
+        if (_currentDirection == Vector3.up) {
             transform.rotation = Quaternion.Euler(0, 0, 90);
-        }
-        else if (_currentDirection == Vector3.down)
-        {
+        } else if (_currentDirection == Vector3.down) {
             transform.rotation = Quaternion.Euler(0, 0, 270);
-        }
-        else if (_currentDirection == Vector3.left)
-        {
+        } else if (_currentDirection == Vector3.left) {
             transform.rotation = Quaternion.Euler(0, 0, 180);
-        }
-        else if (_currentDirection == Vector3.right || _currentDirection == Vector3.zero)
-        {
+        } else if (_currentDirection == Vector3.right || _currentDirection == Vector3.zero) {
             transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else
-        {
+        } else {
             Debug.LogError("ROTAZIONE IMPOSSIBILE");
         }
     }

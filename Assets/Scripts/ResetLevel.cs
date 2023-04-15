@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class ResetLevel : MonoBehaviour
-{
+public class ResetLevel : MonoBehaviour {
     [SerializeField]
     private PointCollector collector;
     [SerializeField]
@@ -21,8 +18,7 @@ public class ResetLevel : MonoBehaviour
     [SerializeField]
     private Vector3 startingGreenPosition;
 
-    public void resetLevel()
-    {   
+    public void resetLevel() {
         //Set position
         MC_Controller.changePosition(startingPosition);
         Ghost_ControllerBlu.changePosition(startingBluPosition);
@@ -34,10 +30,8 @@ public class ResetLevel : MonoBehaviour
         List<GameObject> disabledPoints = collector.getDisabledPoints();
         //Re-enable all the points
         Debug.LogFormat("Disabled points: {0}", disabledPoints[0]);
-        foreach (GameObject point in disabledPoints)
-        {
-            if (point != null)
-            {
+        foreach (GameObject point in disabledPoints) {
+            if (point != null) {
                 point.gameObject.SetActive(true);
             }
         }
